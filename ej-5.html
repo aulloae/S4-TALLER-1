@@ -1,19 +1,26 @@
 <script>
 
-let saldos = [500,250,0,150,1390,12540,0,620,3200,789];
+let saldos = new Array(10); 
 let cuentas = [1,2,3,4,5,6,7,8,9,10];
 
 
-for(let i = 1; i < 2; i++){
-    cuentas[i] = parseInt(prompt("INGRESE EL NUMERO DE CUENTA: " + " (1-10)"));
-    if (cuentas[i] >= 1 && cuentas[i] <= 10) {
-        if (saldos[cuentas[i] - 1] == 0) {
-            document.write("NO EXISTE SALDO EN LA CUENTA NÚMERO " + cuentas[i] + "<br>");
+for(let i = 0; i < saldos.length; i++){
+    e= i + 1;
+    saldos[i] = parseFloat(prompt("INGRESE EL SALDO DE LA CUENTA NÚMERO: " + e + " :"));
+ 
+
+}
+for(let j = 0; j < 1; j++){
+  cuentas[j] = parseInt(prompt("INGRESE EL NUMERO DE CUENTA: " + " (1-10)"));
+    if (cuentas[j] >= 1 && cuentas[j] <= 10) {
+        if (saldos[cuentas[j] - 1] == 0) {
+            document.write("NO EXISTE SALDO EN LA CUENTA NÚMERO " + cuentas[j] + "<br>");
         } else {
-            document.write("EL SALDO DE LA CUENTA NÚMERO " + cuentas[i] + " ES DE: " + saldos[cuentas[i] - 1] + "$" + "<br>");
+            document.write("EL SALDO DE LA CUENTA NÚMERO " + cuentas[j] + " ES DE: " + saldos[cuentas[j] - 1] + "$" + "<br>");
         }
     } else {
         document.write("EL NÚMERO DE CUENTA INGRESADO NO ES VÁLIDO" + "<br>");
     }
 }
+
 </script>
