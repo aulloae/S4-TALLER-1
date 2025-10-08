@@ -1,0 +1,19 @@
+<script>
+
+let saldos = [500,250,0,150,1390,12540,0,620,3200,789];
+let cuentas = [1,2,3,4,5,6,7,8,9,10];
+
+
+for(let i = 1; i < 2; i++){
+    cuentas[i] = parseInt(prompt("INGRESE EL NUMERO DE CUENTA: " + " (1-10)"));
+    if (cuentas[i] >= 1 && cuentas[i] <= 10) {
+        if (saldos[cuentas[i] - 1] == 0) {
+            document.write("NO EXISTE SALDO EN LA CUENTA NÚMERO " + cuentas[i] + "<br>");
+        } else {
+            document.write("EL SALDO DE LA CUENTA NÚMERO " + cuentas[i] + " ES DE: " + saldos[cuentas[i] - 1] + "$" + "<br>");
+        }
+    } else {
+        document.write("EL NÚMERO DE CUENTA INGRESADO NO ES VÁLIDO" + "<br>");
+    }
+}
+</script>

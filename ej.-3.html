@@ -1,0 +1,25 @@
+<script>
+
+let dias = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO", "DOMINGO"];
+let temperaturas = [];
+let promedio=0;
+for(let i = 0; i < dias.length; i++){
+   e= i + 1;
+    temperaturas[i] = parseFloat(prompt("INGRESE TEMPERATURA DEL DÍA:  " + dias[i] + " :"));
+    
+         promedio= promedio + temperaturas[i];
+   
+}
+ promedio= promedio / dias.length;
+ document.write("El promedio de temperatura en la semana es de: " + promedio.toFixed(2) + " grados" + "<br>"+ "<br>");
+ for(let j = 0; j < dias.length; j++){
+    if(temperaturas[j]>promedio){
+        document.write("El día: " + dias[j] + " tuvo temperaturas mayores al promedio: " + temperaturas[j] + " grados" +"<br>" );
+    }
+ }
+
+
+
+
+
+</script>

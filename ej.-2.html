@@ -1,0 +1,36 @@
+<script>
+
+
+let notas= Array(12);
+let aprobados=0;    
+let reprobados=0;
+let promedio=0;
+let total =0;
+for(let i = 0; i < notas.length; i++){
+   e= i + 1;
+    notas[i] = parseFloat(prompt("INGRESE NOTA DEL ESTUDIANTE:  " + e + " :"));
+    
+        if(notas[i]>=7){
+            aprobados++;
+
+        }
+        else{
+            reprobados++;
+        }
+         total=total + notas[i];
+         promedio= total / notas.length;
+   
+}
+ document.write("EL NUMERO DE APROBADOS ES: " + aprobados + "<br>");
+    document.write("EL NUMERO DE REPROBADOS ES: " + reprobados + "<br>");
+    document.write("EL PROMEDIO DE NOTAS ES: " + promedio + "<br>");
+ 
+
+
+
+
+
+
+
+
+</script>

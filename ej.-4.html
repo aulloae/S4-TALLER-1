@@ -1,0 +1,29 @@
+<script>
+let dias = Array(15);
+let ventas = [];
+let ventamax=0;
+let ventamin=0;
+
+
+
+for(let i = 0; i < dias.length; i++){
+   e= i + 1;
+    ventas[i] = parseFloat(prompt("INGRESE VENTAS TOTALES DEL DÍA:  " + e+" :"));
+    if(ventas[i] > ventamax){
+        ventamax=ventas[i];
+        diamax=e;
+    }
+    if(ventas[i] < ventamin || ventamin==0){
+        ventamin=ventas[i];
+        diamin=e;
+    }
+   
+}
+ document.write("LA VENTA MÁXIMA FUE DE: " + ventamax + "$ EL DÍA: "+diamax+"<br>");
+ document.write("LA VENTA MÍNIMA FUE DE: " + ventamin + "$ EL DÍA: "+diamin+"<br>");
+
+
+
+
+
+</script>

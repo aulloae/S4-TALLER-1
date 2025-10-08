@@ -1,0 +1,18 @@
+<script>
+let productos = ["ARROZ", "AZÚCAR", "LECHE", "PAN", "ACEITE", "HUEVOS"];
+let precios = [];
+let total=0;    
+
+for(let i = 0; i < productos.length; i++){
+    precios[i] = parseFloat(prompt("INGRESE PRECIO DEL PRODUCTO:  " + productos[i]));
+    
+    
+     document.write(productos[i] + ": " );
+
+    document.write (precios[i] +"$" +"<br>");
+total=total + precios[i];
+   
+}
+ 
+document.write("<br>"+"EL VALOR TOTAL DE INVENTARIO ES DE: " + total + "$");
+</script>
